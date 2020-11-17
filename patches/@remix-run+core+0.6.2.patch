@@ -1,0 +1,13 @@
+diff --git a/node_modules/@remix-run/core/assetServer.js b/node_modules/@remix-run/core/assetServer.js
+index 05a7e49..2c84dc5 100644
+--- a/node_modules/@remix-run/core/assetServer.js
++++ b/node_modules/@remix-run/core/assetServer.js
+@@ -91,7 +91,7 @@ function createRequestHandler(config, {
+ 
+   let app = express__default['default']();
+   app.disable("x-powered-by");
+-  app.use(morgan__default['default']("dev"));
++  // app.use(morgan__default['default']("dev"));
+   app.use(cors__default['default']());
+   app.get("*", handleRequest);
+   return app;
