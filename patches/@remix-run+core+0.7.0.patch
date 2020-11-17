@@ -1,0 +1,56 @@
+diff --git a/node_modules/@remix-run/core/rollup/watchInput.js b/node_modules/@remix-run/core/rollup/watchInput.js
+index 6cd0a6f..469d110 100644
+--- a/node_modules/@remix-run/core/rollup/watchInput.js
++++ b/node_modules/@remix-run/core/rollup/watchInput.js
+@@ -2,14 +2,14 @@
+ 
+ Object.defineProperty(exports, '__esModule', { value: true });
+ 
+-var fs = require('fs');
+-var chokidar = require('chokidar');
+-var tmp = require('tmp');
++// var fs = require('fs');
++// var chokidar = require('chokidar');
++// var tmp = require('tmp');
+ 
+ function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+ 
+-var chokidar__default = /*#__PURE__*/_interopDefaultLegacy(chokidar);
+-var tmp__default = /*#__PURE__*/_interopDefaultLegacy(tmp);
++// var chokidar__default = /*#__PURE__*/_interopDefaultLegacy(chokidar);
++// var tmp__default = /*#__PURE__*/_interopDefaultLegacy(tmp);
+ 
+ /**
+  * Enables setting the compiler's input dynamically via a hook function.
+@@ -19,6 +19,7 @@ function watchInput({
+   sourceDir,
+   getInput
+ }) {
++  /*
+   let tmpfile = tmp__default['default'].fileSync();
+   let startedWatcher = false;
+   
+@@ -40,6 +41,7 @@ function watchInput({
+   function handleAdd() {
+     triggerRebuild();
+   }
++  */
+ 
+   return {
+     name: "watch-input",
+@@ -58,12 +60,12 @@ function watchInput({
+       // This is a workaround for a bug in Rollup where this.addWatchFile does
+       // not correctly listen for files that are added to a directory.
+       // See https://github.com/rollup/rollup/issues/3704
+-      if (!startedWatcher) {
++      /*if (!startedWatcher) {
+         await startWatcher();
+         startedWatcher = true;
+-      }
++      }*/
+ 
+-      this.addWatchFile(tmpfile.name);
++      // this.addWatchFile(tmpfile.name);
+     }
+ 
+   };

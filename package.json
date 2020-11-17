@@ -2,15 +2,24 @@
   "name": "remix-starter-express",
   "version": "1.0.0",
   "scripts": {
-    "build": "remix build && tsc -b",
-    "dev": "concurrently \"remix run\" \"tsc -b -w\" \"cross-env NODE_ENV=development nodemon --ignore app server.js\"",
+    "dev": "NODE_ENV=development run-p -r dev:*",
+    "dev:css": "postcss styles --base styles --dir app/ -w",
+    "dev:remix": "remix run",
+    "dev:tsc": "tsc -b -w",
+    "dev:server": "nodemon --trace-warnings --delay 2 -e js --ignore app server.js",
+    "build": "run-s build:*",
+    "build:css": "postcss styles --base styles --dir app/ --env production",
+    "build:remix": "remix build",
+    "build:tsc": "tsc -b",
     "start": "node server.js"
   },
   "dependencies": {
-    "@remix-run/cli": "^0.7.0",
-    "@remix-run/express": "^0.7.0",
-    "@remix-run/loader": "^0.7.0",
-    "@remix-run/react": "^0.7.0",
+    "@remix-run/cli": "0.6.2",
+    "@remix-run/express": "0.6.2",
+    "@remix-run/loader": "0.6.2",
+    "@remix-run/react": "0.6.2",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
     "react": "^16.14.0",
@@ -21,12 +30,16 @@
   "devDependencies": {
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
-    "concurrently": "^5.3.0",
     "cross-env": "^7.0.2",
     "nodemon": "^2.0.5",
-    "typescript": "^4.0.3"
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.1.7",
+    "postcss-cli": "^8.2.0",
+    "postinstall-postinstall": "^2.1.0",
+    "tailwindcss": "^1.9.6",
+    "typescript": "^4.1.1-rc"
   },
-  "engines": {
-    "node": "12"
-  }
+  "browserslist": [
+    "last 1 chrome versions"
+  ]
 }

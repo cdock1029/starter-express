@@ -1,8 +1,8 @@
-import React from "react";
-import { Meta, Scripts, Styles, Routes, useGlobalData } from "@remix-run/react";
+import React from 'react'
+import { Meta, Scripts, Styles, Routes, useGlobalData } from '@remix-run/react'
 
 export default function App() {
-  let data = useGlobalData();
+  let data = useGlobalData()
 
   return (
     <html lang="en">
@@ -10,6 +10,10 @@ export default function App() {
         <meta charSet="utf-8" />
         <Meta />
         <Styles />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"
+        />
       </head>
       <body>
         <Routes />
@@ -19,5 +23,5 @@ export default function App() {
         </footer>
       </body>
     </html>
-  );
+  )
 }
