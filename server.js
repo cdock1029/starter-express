@@ -4,9 +4,6 @@ const { createRequestHandler } = require("@remix-run/express");
 
 let app = express();
 
-if (process.env.NODE_ENV === "development") {
-  app.use(morgan("dev"));
-}
 
 app.use(express.static("public"));
 
