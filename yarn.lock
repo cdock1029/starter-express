@@ -979,6 +979,23 @@
     postcss "7.0.32"
     purgecss "^2.3.0"
 
+"@geist-ui/style@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@geist-ui/style/-/style-2.0.0.tgz#5a1127d35b702acacd542c6218eff2aa9c70e93c"
+  integrity sha512-42FIVfbulNYz2SuA4zC3gPbyP5bhSwPvvFUPXgmDrAacFDDZo0lx3ZuXMUK7Z2UfIQNQc3RipX9bLXrmxmosKw==
+  dependencies:
+    "@geist-ui/themes" "^1.1.0"
+
+"@geist-ui/themes@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@geist-ui/themes/-/themes-1.1.0.tgz#3644195ae699eb904ccf29677e8ab51b050d74d1"
+  integrity sha512-N13wlIOeEU8QkOu4mxg5AcF7DpfLNBcZhW/YDMRVEch0ehPl8Y+g4/JW1A4uT6E5W3USSybslmhjFZ7HH8T2LA==
+
+"@geist-ui/typography@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@geist-ui/typography/-/typography-1.0.1.tgz#236f431a9dec2594461851fc8dc3e3dd30933c8a"
+  integrity sha512-5LjJeIziAcmSPye5/LQ2QpslkB2WJCQpdVDlNlkZwgPXPiZyREOZtE78YhvObovjptp9W7BUmP84sD3kWN4LCQ==
+
 "@mdx-js/mdx@^1.6.18":
   version "1.6.21"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-1.6.21.tgz#d3651b4802db7bdc399270c0ffa9e2aa99dd4b00"

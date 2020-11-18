@@ -10,3 +10,7 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+.active-link {
+  color: #f81ce5;
+}
