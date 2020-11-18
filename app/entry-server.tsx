@@ -1,9 +1,9 @@
-import React from "react";
-import ReactDOMServer from "react-dom/server";
-import type { EntryContext } from "@remix-run/core";
-import Remix from "@remix-run/react/server";
+import * as React from 'react'
+import ReactDOMServer from 'react-dom/server'
+import type { EntryContext } from '@remix-run/core'
+import Remix from '@remix-run/react/server'
 
-import App from "./App";
+import App from './App'
 
 export default function handleRequest(
   request: Request,
@@ -15,13 +15,13 @@ export default function handleRequest(
     <Remix context={remixContext} url={request.url}>
       <App />
     </Remix>
-  );
+  )
 
-  return new Response("<!DOCTYPE html>" + markup, {
+  return new Response('<!DOCTYPE html>' + markup, {
     status: responseStatusCode,
     headers: {
       ...Object.fromEntries(responseHeaders),
-      "Content-Type": "text/html"
-    }
-  });
+      'Content-Type': 'text/html',
+    },
+  })
 }

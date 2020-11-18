@@ -1,9 +1,9 @@
-import type { DataLoader } from "@remix-run/core";
+import type { DataLoader } from '@remix-run/core'
 
 let loader: DataLoader = async () => {
   return {
-    date: new Date()
-  };
-};
+    date: new Date(),
+  }
+}
 
-export = loader;
+export = loader
