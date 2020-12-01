@@ -3,15 +3,15 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "NODE_ENV=development run-p -r dev:*",
+    "dev": "NODE_ENV=development run-p -l -n -r dev:*",
     "dev:css": "postcss styles --base styles --dir app/ -w",
     "dev:remix": "remix run",
-    "dev:tsc": "tsc -b -w",
-    "dev:server": "cross-env NODE_ENV=development nodemon --delay 2 -e js --ignore app server.js",
+    "dev:tsc": "tsc -b -w --preserveWatchOutput",
+    "dev:server": "node-dev --dedupe --deps=0 --ignore=.cache server.js",
     "build": "run-s build:*",
+    "build:tsc": "tsc -b",
     "build:css": "postcss styles --base styles --dir app/ --env production",
     "build:remix": "remix build",
-    "build:tsc": "tsc -b",
     "start": "node server.js"
   },
   "dependencies": {
@@ -37,6 +37,7 @@
     "@types/react-dom": "^17.0.0",
     "autoprefixer": "^10.0.4",
     "cross-env": "^7.0.2",
+    "node-dev": "^6.2.0",
     "nodemon": "^2.0.6",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.1.10",
